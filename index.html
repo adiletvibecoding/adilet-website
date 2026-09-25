@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VibeWeb — Сайт жасау</title>
+
+    <style>.contact {
+    padding: 110px 0;
+    background: #0d0d0d;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    border: 1px solid #29402b;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(124, 255, 107, 0.12),
+            transparent 35%
+        ),
+        #0c110d;
+}
+
+.contact-text {
+    max-width: 650px;
+}
+
+.contact-label {
+    color: #7cff6b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 210px;
+}
+
+.whatsapp-button {
+    background: #7cff6b;
+    color: #050505;
+
+    padding: 16px 22px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.telegram-button {
+    border: 1px solid #333;
+
+    padding: 16px 22px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.telegram-button:hover {
+    border-color: #7cff6b;
+    color: #7cff6b;
+}
+
+@media (max-width: 700px) {
+
+    .contact-box {
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+
+    .contact-actions {
+        width: 100%;
+    }
+
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #7cff6b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #7cff6b;
+        }
+
+        .hero p {
+            color: #999;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #7cff6b;
+            color: #050505;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: white;
+        }
+
+        .services {
+    padding: 100px 0;
+    background: #0d0d0d;
+}
+
+.services h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.section-text {
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #151515;
+    border: 1px solid #252525;
+    padding: 30px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: #7cff6b;
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #888;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+    .services h2 {
+        font-size: 38px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}.about {
+    padding: 110px 0;
+    background: #080808;
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-label {
+    display: inline-block;
+    color: #7cff6b;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.about h2 span {
+    color: #7cff6b;
+}
+
+.about p {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-bottom: 18px;
+}
+
+.about .button {
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+}.portfolio {
+    padding: 110px 0;
+    background: #0d0d0d;
+}
+
+.portfolio h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+    border-color: #7cff6b;
+}
+
+.project-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.project-1 {
+    background: linear-gradient(135deg, #203a22, #111);
+}
+
+.project-2 {
+    background: linear-gradient(135deg, #3a2b20, #111);
+}
+
+.project-3 {
+    background: linear-gradient(135deg, #202b3a, #111);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info span {
+    color: #7cff6b;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.project-info h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.project-info p {
+    color: #888;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .portfolio h2 {
+        font-size: 38px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+}.pricing {
+    padding: 110px 0;
+    background: #080808;
+}
+
+.pricing h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.price-card {
+    position: relative;
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.price-card h3 {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.price-card p {
+    color: #888;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.price-card li {
+    margin: 12px 0;
+    color: #bbb;
+}
+
+.price-button {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.price-button:hover {
+    border-color: #7cff6b;
+    color: #7cff6b;
+}
+
+.price-button.main {
+    background: #7cff6b;
+    color: #050505;
+    border-color: #7cff6b;
+}
+
+.popular {
+    border-color: #7cff6b;
+}
+
+.popular-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 10px;
+    color: #7cff6b;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .pricing h2 {
+        font-size: 38px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+}@media (max-width: 700px) {
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    Vibe<span>Web</span>.
+                </div>
+
+                <a href="#contact">Байланысу</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <h1>
+                    Бизнесіңізге
+                    <span>заманауи сайт</span>
+                    жасап беремін.
+                </h1>
+
+                <p>
+                    Дүкендерге, кәсіпкерлерге және қызмет көрсететін
+                    бизнеске әдемі, жылдам және мобильді сайттар жасаймын.
+                </p>
+
+                <a class="button" href="#contact">
+                    Сайтқа тапсырыс беру →
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+
+    <div class="container">
+
+        <h2>Не жасап бере аламын?</h2>
+
+        <p class="section-text">
+            Бизнесіңізге қажетті заманауи сайтты нөлден жасап беремін.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🛍️</div>
+
+                <h3>Интернет-дүкен</h3>
+
+                <p>
+                    Өнімдеріңізді көрсетуге және клиенттерден
+                    тапсырыс қабылдауға арналған сайт.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🏪</div>
+
+                <h3>Бизнес сайт</h3>
+
+                <p>
+                    Компанияңызды, қызметтеріңізді және
+                    артықшылықтарыңызды көрсететін сайт.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+
+                <h3>Landing Page</h3>
+
+                <p>
+                    Бір өнімді немесе қызметті жарнамалауға
+                    арналған заманауи бірбеткей сайт.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">👤</div>
+
+                <h3>Жеке бренд</h3>
+
+                <p>
+                    Кәсіпкерге, маманға немесе контент авторына
+                    арналған жеке сайт.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section><section class="about">
+
+    <div class="container">
+
+        <div class="about-content">
+
+            <div class="about-label">
+                👋 Мен туралы
+            </div>
+
+            <h2>
+                Бизнеске жай ғана сайт емес,
+                <span>нәтиже әкелетін</span> сайт жасауға тырысамын.
+            </h2>
+
+            <p>
+                <p>
+    Менің атым — Adilet. Vibe coding арқылы
+    бизнеске, дүкендерге және кәсіпкерлерге
+    заманауи әрі әдемі сайттар жасап беремін.
+</p>
+            </p>
+
+            <p>
+                <p>
+    Мақсатым — сіздің бизнесіңізді интернетте
+    кәсіби түрде көрсету және клиенттерге
+    түсінікті, ыңғайлы сайт жасау.
+</p>
+            </p>
+
+            <a class="button" href="#contact">
+                Жобамды талқылау →
+            </a>
+
+        </div>
+
+    </div>
+
+</section><section class="portfolio">
+
+    <div class="container">
+
+        <h2>Менің жұмыстарым</h2>
+
+        <p class="section-text">
+            Бизнеске арналған заманауи сайттардың мысалдары.
+        </p>
+
+        <div class="portfolio-grid">
+
+            <div class="project">
+                <div class="project-image project-1">
+                    🛍️
+                </div>
+
+                <div class="project-info">
+                    <span>Интернет-дүкен</span>
+
+                    <h3>Fashion Store</h3>
+
+                    <p>
+                        Киім дүкеніне арналған заманауи
+                        интернет-дүкен концепциясы.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <div class="project-image project-2">
+                    ☕
+                </div>
+
+                <div class="project-info">
+                    <span>Business</span>
+
+                    <h3>Coffee Shop</h3>
+
+                    <p>
+                        Кофеханаға арналған минималистік
+                        landing page.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <div class="project-image project-3">
+                    💼
+                </div>
+
+                <div class="project-info">
+                    <span>Services</span>
+
+                    <h3>Pro Service</h3>
+
+                    <p>
+                        Қызмет көрсететін бизнеске арналған
+                        кәсіби сайт.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section><section class="pricing">
+
+    <div class="container">
+
+        <h2>Бағалар</h2>
+
+        <p class="section-text">
+            Әр жоба бизнесіңіздің көлемі мен қажеттілігіне қарай есептеледі.
+        </p>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+
+                <h3>START</h3>
+
+                <div class="price">
+                    50 000 ₸
+                </div>
+
+                <p>Бастапқы деңгейдегі сайт</p>
+
+                <ul>
+                    <li>✓ 1 бет</li>
+                    <li>✓ Заманауи дизайн</li>
+                    <li>✓ Телефонға бейімдеу</li>
+                    <li>✓ WhatsApp батырмасы</li>
+                </ul>
+
+                <a class="price-button" href="#contact">
+                    Тапсырыс беру
+                </a>
+
+            </div>
+
+
+            <div class="price-card popular">
+
+                <div class="popular-label">
+                    КӨП ТАҢДАЛАТЫН
+                </div>
+
+                <h3>BUSINESS</h3>
+
+                <div class="price">
+                    100 000 ₸
+                </div>
+
+                <p>Толық бизнес сайты</p>
+
+                <ul>
+                    <li>✓ 3–7 бөлім</li>
+                    <li>✓ Жеке дизайн</li>
+                    <li>✓ Телефонға бейімдеу</li>
+                    <li>✓ WhatsApp / Instagram</li>
+                    <li>✓ SEO негіздері</li>
+                </ul>
+
+                <a class="price-button main" href="#contact">
+                    Тапсырыс беру
+                </a>
+
+            </div>
+
+
+            <div class="price-card">
+
+                <h3>SHOP</h3>
+
+                <div class="price">
+                    150 000 ₸
+                </div>
+
+                <p>Интернет-дүкен</p>
+
+                <ul>
+                    <li>✓ Өнім каталогы</li>
+                    <li>✓ Категориялар</li>
+                    <li>✓ Өнім карточкалары</li>
+                    <li>✓ Тапсырыс қабылдау</li>
+                    <li>✓ Мобильді нұсқа</li>
+                </ul>
+
+                <a class="price-button" href="#contact">
+                    Тапсырыс беру
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section><section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-text">
+
+                <div class="contact-label">
+                    🚀 Жобаңызды бастайық
+                </div>
+
+                <h2>
+                    Бизнесіңізге сайт керек пе?
+                </h2>
+
+                <p>
+                    Бизнесіңіз туралы қысқаша жазып жіберіңіз.
+                    Сайттың қандай болатынын бірге талқылаймыз.
+                </p>
+
+            </div>
+
+
+            <div class="contact-actions">
+
+                <a
+                    class="whatsapp-button"
+                    href="https://wa.me/77066932600?text=Сәлем!%20Маған%20сайт%20жасату%20керек."
+                    target="_blank"
+                >
+                    WhatsApp арқылы жазу → 
+                </a>
+
+                <a
+                    class="telegram-button"
+                    href="https://t.me/dkkenvv"
+                    target="_blank"
+                >
+                    Telegram
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
